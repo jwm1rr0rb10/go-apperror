@@ -4,9 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"kalipso/app/pkg/golang/apperror"
-
 	"github.com/getsentry/sentry-go"
+	"github.com/jwm1rr0rb10/go-apperror"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
