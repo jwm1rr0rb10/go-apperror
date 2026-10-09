@@ -1,5 +1,8 @@
 # apperror
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/jwm1rr0rb10/go-apperror.svg)](https://pkg.go.dev/github.com/jwm1rr0rb10/go-apperror)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Структурированные ошибки для Go-сервисов с gRPC и HTTP API.
 
 Один тип `*AppError` содержит тип ошибки, сообщение для клиента, прикладной код, нарушения по полям,
@@ -31,7 +34,7 @@
 ## Установка
 
 ```bash
-go get -u github.com/jwm1rr0rb10/libraries/backend/golang/apperror
+go get -u github.com/jwm1rr0rb10/go-apperror
 ```
 
 ---
@@ -46,8 +49,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jwm1rr0rb10/libraries/backend/golang/apperror"
-	"github.com/jwm1rr0rb10/libraries/backend/golang/apperror/sentryreport"
+	"github.com/jwm1rr0rb10/go-apperror"
+	"github.com/jwm1rr0rb10/go-apperror/sentryreport"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	"google.golang.org/grpc"
@@ -366,4 +369,4 @@ go test -run=^$ -fuzz=FuzzParseReason -fuzztime=30s .
 
 ## Лицензия
 
-[MIT License](https://github.com/jwm1rr0rb10/libraries/blob/main/backend/golang/LICENSE) – © Raman Zaitsau [@jwm1rrr0rb10](https://github.com/jwm1rr0rb10)
+[MIT License](LICENSE) – © 2026 Raman Zaitsau [@jwm1rr0rb10](https://github.com/jwm1rr0rb10)

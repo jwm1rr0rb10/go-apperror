@@ -59,6 +59,7 @@ func TestPanicRuntimeErrorStackStartsAtUserCode(t *testing.T) {
 	th := newTestHandler()
 	handler := func(ctx context.Context, req any) (any, error) {
 		var m map[string]int
+		//lint:ignore SA5000 the panic is the point of the test
 		m["x"] = 1 // assignment to a nil map panics in the runtime
 		return nil, nil
 	}

@@ -60,7 +60,7 @@ func TestStackTraceOnlyForInternal(t *testing.T) {
 	require.NotEmpty(t, err.StackTrace())
 
 	frame, _ := runtime.CallersFrames(err.StackTrace()).Next()
-	assert.Equal(t, "kalipso/app/pkg/golang/apperror.TestStackTraceOnlyForInternal", frame.Function,
+	assert.Equal(t, "github.com/jwm1rr0rb10/go-apperror.TestStackTraceOnlyForInternal", frame.Function,
 		"first frame must be the caller of the constructor")
 
 	assert.Empty(t, NewNotFoundError("PS").StackTrace())
